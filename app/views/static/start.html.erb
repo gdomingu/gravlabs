@@ -1,0 +1,74 @@
+<div class="section no-pad-bot">
+    <div class="container">
+      <h1 class="header center text-lighten-2">Get started</h1>
+    </div>
+</div>
+<div class="section">
+  <div class="container">
+    <div class="row">
+        <div class="col s12 m12">
+          <div class="card large">
+            <div class="card-image">
+              <img src="http://www.durangotrain.com/sites/default/files/images/OldHundred%20mine%20YLashmett%201%20WM.jpg">
+            </div>
+            <div class="card-tabs">
+              <ul class="tabs tabs-fixed-width">
+                <li class="tab"><a class="active" href="#test4">Day</a></li>
+                <li class="tab"><a href="#test5">Night</a></li>
+              </ul>
+            </div>
+            <div class="card-content grey lighten-4">
+              <div id="test4"><p>During the day when renewables like solar are producing excess energy, we use that energy to push the carts up the hill at the mine.</p></div>
+              <div id="test5"><p>During the night or other peak hours, the system will slowly let the cart slide down the rails, producing energy back into the grid when it needs it most. Similar to how a cuckoo clock works!</p></div>
+            </div>
+            <br><br>
+            <!-- <img src="http://cdn.powermag.com/wp-content/uploads/2011/04/520004ddba5b8-040111_SR_Storage_Fig4.jpg"> -->
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<div class="section">
+  <div class="container">
+    <div class="row">
+      <%= form_tag("/results", method: "post", class: "col s12") do %>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="mine_name" type="text" name="mine[name]" class="validate">
+              <label for="mine_name">Mine name</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="cart_num" type="number" name="mine[cart_num]" class="validate">
+              <label for="cart_num">Number of Carts</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="cart_weight" type="text" name="mine[cart_weight]" class="validate">
+              <label for="cart_weight">Weight of 1 Cart (kg)</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="track_length" type="number" name="mine[track_length]" class="validate">
+              <label for="track_length">Length of track (m)</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="track_incline" type="text" name="mine[track_length]" class="validate">
+              <label for="track_incline">Incline of track (degrees)</label>
+            </div>
+          </div>
+         <!--  <div class="row">
+            <div class="input-field col s6">
+              <i class="material-icons prefix">textsms</i>
+              <input type="text" id="autocomplete-input" class="autocomplete">
+              <label for="autocomplete-input">State</label>
+            </div>
+          </div> -->
+          <div class="row center">
+              <input name="commit" type="submit" value="Estimate" class="btn-large waves-effect waves-light teal lighten-1"/>
+          </div>
+        <% end %>
+      </div>
+  </div>
+</div>
