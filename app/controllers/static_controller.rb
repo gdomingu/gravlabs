@@ -13,6 +13,6 @@ class StaticController < ApplicationController
   private
 
   def form_params
-    params.require(:mine).permit(:name, :cart_num, :cart_weight, :track_length, :track_incline)
+    params.require(:mine).permit(:name, :cart_num, :cart_weight, :track_length, :track_incline, :state)
   end
 end

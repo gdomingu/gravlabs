@@ -4,7 +4,10 @@ class PotentialStorageCalculator
     @cart_weight = form_params[:cart_weight].to_f
     @track_length = form_params[:track_length].to_f
     @track_incline = form_params[:track_incline].to_f
+    @state = form_params[:state]
   end
+
+  attr_reader :state
 
   def kw_storage
     (joules_to_kw(joules) * efficiency).round(2)
@@ -23,7 +26,7 @@ class PotentialStorageCalculator
   end
 
   def joules
-    mass * gravity * height
+    (mass * gravity * height).round(2)
   end
 
   def joules_to_kw(joules)
@@ -35,7 +38,7 @@ class PotentialStorageCalculator
   end
 
   def height
-    @track_length * Math.sin(radians).abs
+    (@track_length * Math.sin(radians).abs).round(2)
   end
 
   def radians

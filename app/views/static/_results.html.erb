@@ -7,10 +7,10 @@
     <div id="test4">
       <h5>Estimate Breakdown</h5>
       We have calculated that your carts have total mass of <%= @results.mass %> kgs.
-      Given the length and incline, the carts will decend a total of <%= @results.height %> meters. This has <%= @results.joules %> in potential energy. We have also adjusted for some efficiency loss.
+      Given the length and incline, the carts will decend a total of <%= @results.height %> meters. This has <%= @results.joules %> joules in potential energy. We have also adjusted for some efficiency loss.
 
       <h5>Savings Breakdown</h5>
-      ...
+      We calculated that in the state of <%= @results.state %>, you would save $<%= @results.california_savings %> in one year by purchasing during off peak hours and selling back to the grid during peak-hours. 
     </div>
   </div>
 </div>
