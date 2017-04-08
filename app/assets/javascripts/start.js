@@ -1,4 +1,5 @@
 $(document).ready(function() {
+  $('select').material_select();
   $("#new_results").on("ajax:success", function(e, data, status, xhr) {
     return $("#results").html(xhr.responseText);
   }).on("ajax:error", function(e, xhr, status, error) {
