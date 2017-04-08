@@ -6,6 +6,7 @@ class StaticController < ApplicationController
   end
 
   def results
+    p form_params
     @results = PotentialStorageCalculator.new(form_params).in_kwh
   end
 
