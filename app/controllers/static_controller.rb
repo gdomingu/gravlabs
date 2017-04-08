@@ -6,7 +6,7 @@ class StaticController < ApplicationController
   end
 
   def results
-    @results = PotentialStorageCalculator.new(form_params).in_kwh
+    @results = PotentialStorageCalculator.new(form_params)
     render partial: "results"
   end
 

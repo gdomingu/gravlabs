@@ -6,7 +6,7 @@ class PotentialStorageCalculator
     @track_incline = form_params[:track_incline].to_f
   end
 
-  def in_kwh
+  def kw_storage
     p "mass: #{mass}, height: #{height} "
     (joules_to_kw(joules) * efficiency).round(2)
   end
