@@ -8,7 +8,7 @@ class PotentialStorageCalculator
 
   def in_kwh
     p "mass: #{mass}, height: #{height} "
-    joules_to_kw(joules) * efficiency
+    (joules_to_kw(joules) * efficiency).round(2)
   end
 
   def mass
