@@ -7,8 +7,11 @@ class PotentialStorageCalculator
   end
 
   def kw_storage
-    p "mass: #{mass}, height: #{height} "
     (joules_to_kw(joules) * efficiency).round(2)
+  end
+
+  def california_savings
+    (kw_storage * 37.96).round(2)
   end
 
   def mass

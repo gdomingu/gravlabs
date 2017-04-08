@@ -33,10 +33,10 @@
     <div class="row">
       <form accept-charset="UTF-8" action="/results" class="col s12" data-remote="true" id="new_results" method="post">
           <div class="row">
-            <div class="input-field col s6">
+            <!-- <div class="input-field col s6">
               <input id="mine_name" type="text" name="mine[name]" class="validate">
               <label for="mine_name">Mine name</label>
-            </div>
+            </div> -->
             <div class="input-field col s6">
               <%= select_tag :state, options_for_select(us_states), name: "mine[state]", include_blank: true %>
               <label>State Select</label>
@@ -62,13 +62,6 @@
               <label for="track_incline">Incline of track (degrees)</label>
             </div>
           </div>
-         <!--  <div class="row">
-            <div class="input-field col s6">
-              <i class="material-icons prefix">textsms</i>
-              <input type="text" id="autocomplete-input" class="autocomplete">
-              <label for="autocomplete-input">State</label>
-            </div>
-          </div> -->
           <div class="row center">
               <input name="commit" type="submit" value="Estimate" class="btn-large waves-effect waves-light teal lighten-1"/>
           </div>

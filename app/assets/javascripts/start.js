@@ -4,5 +4,7 @@ $(document).ready(function() {
     return $("#results").html(xhr.responseText);
   }).on("ajax:error", function(e, xhr, status, error) {
     return $("#results").html("<p>ERROR</p>");
+  }).on("ajax:complete", function(){
+    $(document).scrollTop($(document).height(), 'slow');
   });
 });
